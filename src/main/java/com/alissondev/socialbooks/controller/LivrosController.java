@@ -40,4 +40,10 @@ public class LivrosController {
 	public void deletar(@PathVariable Long id) {
 		livrosRepository.deleteById(id);
 	}
+	
+	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+	public void atualizar(@RequestBody Livro livro, @PathVariable Long id) {
+		livro.setId(id);
+		livrosRepository.save(livro);
+	}
 }
