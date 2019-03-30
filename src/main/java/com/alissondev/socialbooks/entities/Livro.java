@@ -18,6 +18,16 @@ public class Livro {
 	private List<Comentario> comentarios;
 	
 	private String autor;
+	
+	public Livro() {
+	}
+		
+	public Livro(String nome) {
+		super();
+		this.nome = nome;
+	}
+
+
 
 	public Long getId() {
 		return id;
